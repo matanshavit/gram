@@ -3,14 +3,14 @@ import cors from '@fastify/cors'
 
 const server = Fastify({
   logger: {
-    level: 'info'
-  }
+    level: 'info',
+  },
 })
 
 // Register CORS
 await server.register(cors, {
   origin: ['http://localhost:3000'],
-  credentials: true
+  credentials: true,
 })
 
 // Health check endpoint
@@ -18,7 +18,7 @@ server.get('/api/health', async () => {
   return {
     status: 'ok',
     service: 'gram-backend',
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   }
 })
 

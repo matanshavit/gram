@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Architecture Interview Tool - Specialized software architecture diagramming tool built on tldraw",
   "private": true,
+  "type": "module",
   "workspaces": [
     "packages/*"
   ],
@@ -10,10 +11,26 @@
     "dev": "concurrently \"pnpm --filter frontend dev\" \"pnpm --filter backend dev\"",
     "build": "pnpm --filter frontend build && pnpm --filter backend build",
     "clean": "pnpm --filter frontend clean && pnpm --filter backend clean",
-    "type-check": "pnpm --filter frontend type-check && pnpm --filter backend type-check"
+    "type-check": "pnpm --filter frontend type-check && pnpm --filter backend type-check",
+    "lint": "eslint packages/*/src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint packages/*/src --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write \"packages/*/src/**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format:check": "prettier --check \"packages/*/src/**/*.{js,jsx,ts,tsx,json,md}\"",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "@eslint/js": "^9.35.0",
+    "@typescript-eslint/eslint-plugin": "^8.43.0",
+    "@typescript-eslint/parser": "^8.43.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "prettier": "^3.6.2"
   },
   "engines": {
     "node": ">=18.0.0",
