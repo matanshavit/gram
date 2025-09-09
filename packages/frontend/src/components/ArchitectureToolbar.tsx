@@ -47,7 +47,7 @@ export function ArchitectureToolbar() {
   }
 
   return (
-    <div className="absolute top-4 left-4 z-10 bg-white rounded-lg shadow-lg border border-gray-200 p-2">
+    <div className="absolute top-16 left-8 z-10 bg-white rounded-lg shadow-lg border border-gray-200 p-2">
       <div className="flex flex-col gap-1">
         <h3 className="text-xs font-semibold text-gray-700 px-2 py-1">
           Architecture Components
