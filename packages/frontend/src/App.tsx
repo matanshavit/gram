@@ -28,8 +28,28 @@ function App() {
                 },
                 {
                   type: 'microservice',
-                  x: 200,
+                  x: 500,
+                  y: 100,
+                },
+                {
+                  type: 'apiGateway',
+                  x: 100,
                   y: 250,
+                },
+                {
+                  type: 'messageQueue',
+                  x: 300,
+                  y: 250,
+                },
+                {
+                  type: 'cdn',
+                  x: 500,
+                  y: 250,
+                },
+                {
+                  type: 'userClient',
+                  x: 200,
+                  y: 400,
                 },
               ])
             }
